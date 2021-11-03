@@ -20,49 +20,7 @@ style.use("ggplot")
 colr1='white'
 colr2='white'
 
-#hardcoded 
-
-'''rty1=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-
-maindict={}
-for i in range(len(rty1)):
-    maindict[rty1[i]]=0
-
-ref1=['h','q','u','t','v','m','r','a','l','s','z','i','f','y','x','w','b','g','j','d','c','e','p','o','n','k']
-ref2=['f','q','i','k','y','a','s','n','c','r','d','w','u','h','x','z','b','j','g','v','m','t','l','o','e','p']
-ref3=['c','r','a','h','q','n','i','d','g','m','l','k','j','f','p','o','e','b','w','v','z','t','s','y','x','u']
-
-R1=['z', 'x', 'v', 'u', 'k', 'o', 'f', 'h', 'd', 'q', 'i', 't', 'm', 'l', 'w', 'e', 'n', 'p', 'y', 'b', 'g', 'r', 's', 'c', 'j', 'a']
-R2=['d', 'i', 't', 'l', 's', 'e', 'r', 'y', 'x', 'w', 'h', 'g', 'z', 'q', 'v', 'c', 'n', 'j', 'u', 'a', 'm', 'p', 'o', 'f', 'b', 'k']
-R3=['p', 'y', 'g', 'c', 'k', 'z', 'w', 'e', 'l', 'd', 'j', 'a', 'u', 'q', 'n', 'm', 'i', 't', 'b', 'h', 's', 'r', 'o', 'f', 'v', 'x']
-R4=['i', 'c', 'g', 'z', 'e', 'm', 'j', 'n', 'v', 'b', 'd', 'o', 'a', 'w', 'p', 'h', 'y', 's', 'f', 'r', 'q', 'l', 'k', 'x', 'u', 't']
-R5=['v', 't', 'g', 'q', 'i', 'u', 'r', 'b', 's', 'h', 'm', 'n', 'd', 'z', 'a', 'c', 'l', 'x', 'j', 'y', 'o', 'e', 'p', 'f', 'k', 'w']
-
-R1O=['z', 'x', 'v', 'u', 'k', 'o', 'f', 'h', 'd', 'q', 'i', 't', 'm', 'l', 'w', 'e', 'n', 'p', 'y', 'b', 'g', 'r', 's', 'c', 'j', 'a']
-R2O=['d', 'i', 't', 'l', 's', 'e', 'r', 'y', 'x', 'w', 'h', 'g', 'z', 'q', 'v', 'c', 'n', 'j', 'u', 'a', 'm', 'p', 'o', 'f', 'b', 'k']
-R3O=['p', 'y', 'g', 'c', 'k', 'z', 'w', 'e', 'l', 'd', 'j', 'a', 'u', 'q', 'n', 'm', 'i', 't', 'b', 'h', 's', 'r', 'o', 'f', 'v', 'x']
-R4O=['i', 'c', 'g', 'z', 'e', 'm', 'j', 'n', 'v', 'b', 'd', 'o', 'a', 'w', 'p', 'h', 'y', 's', 'f', 'r', 'q', 'l', 'k', 'x', 'u', 't']
-R5O=['v', 't', 'g', 'q', 'i', 'u', 'r', 'b', 's', 'h', 'm', 'n', 'd', 'z', 'a', 'c', 'l', 'x', 'j', 'y', 'o', 'e', 'p', 'f', 'k', 'w']
-
-R1_internal=[25,22,19,17,6,9,-1,0,-5,7,-2,8,0,-2,8,-11,-3,-2,6,-18,-14,-4,-4,-21,-15,-25]
-R2_internal=[3,7,17,8,14,-1,11,17,15,13,-3,-5,13,3,7,-13,-3,-8,2,-19,-8,-6,-8,-18,-23,-15]
-R3_internal=[15,23,4,-1,6,20,16,-3,3,-6,-1,-11,8,3,-1,-3,-8,2,-17,-12,-2,-4,-8,-18,-3,-2]
-R4_internal=[8,1,4,22,0,7,3,6,13,-8,-7,3,-12,9,1,-8,8,1,-13,-2,-4,-10,-12,0,-4,-6]
-R5_internal=[21,18,4,13,4,15,11,-6,10,-2,2,2,-9,12,-14,-13,-5,6,-9,5,-6,-17,-7,-18,-14,-3]
-
-R1_internalO=[25,22,19,17,6,9,-1,0,-5,7,-2,8,0,-2,8,-11,-3,-2,6,-18,-14,-4,-4,-21,-15,-25]
-R2_internalO=[3,7,17,8,14,-1,11,17,15,13,-3,-5,13,3,7,-13,-3,-8,2,-19,-8,-6,-8,-18,-23,-15]
-R3_internalO=[15,23,4,-1,6,20,16,-3,3,-6,-1,-11,8,3,-1,-3,-8,2,-17,-12,-2,-4,-8,-18,-3,-2]
-R4_internalO=[8,1,4,22,0,7,3,6,13,-8,-7,3,-12,9,1,-8,8,1,-13,-2,-4,-10,-12,0,-4,-6]
-R5_internalO=[21,18,4,13,4,15,11,-6,10,-2,2,2,-9,12,-14,-13,-5,6,-9,5,-6,-17,-7,-18,-14,-3]
-
-
-reflector=[ref1,ref2,ref3]
-rotorI=[R1_internal,R2_internal,R3_internal,R4_internal,R5_internal]
-rotorIO=[R1_internalO,R2_internalO,R3_internalO,R4_internalO,R5_internalO]
-rotorE=[R1,R2,R3,R4,R5]
-rotorEO=[R1O,R2O,R3O,R4O,R5O]'''
-
+#hardcoded eqifec
 
 rty1=[]
 
@@ -141,15 +99,6 @@ def randomizer(button,num,turn):
     global rotorE
     global rotorEO
     
-    global colr1
-    global colr2
-    
-    if button['bg'] == 'green':
-        button['bg'] = 'red'
-    else:
-        button['bg'] = 'green'
-        button['activebackground'] = button['bg']
-        print('Button pressed')
     
     if turn==0:
          
@@ -222,8 +171,7 @@ def randomizer(button,num,turn):
         rotorE=[R1,R2,R3,R4,R5]
         rotorEO=[R1O,R2O,R3O,R4O,R5O]
         
-        colr1='white'
-        colr2='green'
+
     else:
         
         rty1=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
@@ -267,14 +215,6 @@ def randomizer(button,num,turn):
         rotorE=[R1,R2,R3,R4,R5]
         rotorEO=[R1O,R2O,R3O,R4O,R5O]
         
-        colr1='green'
-        colr2='white'
-        
- 
-    print(colr1,colr2)   
-'''reflector=[rotordict[0],rotordict[1],rotordict[2]]
-rotorI=[index[0],index[1],index[2],index[3],index[4]]
-rotorE=[rotordict[3],rotordict[4],rotordict[5],rotordict[6],rotordict[7]]'''
     
 #in progress above
 
@@ -317,6 +257,16 @@ canvas = FigureCanvasTkAgg(fig, master=win)  # A tk.DrawingArea.
 canvas.get_tk_widget().pack()
 toolbar = NavigationToolbar2Tk(canvas, win)
 
+
+def IOC(dic):
+    c=1/(len(dic)*(len(dic)-1))
+    sum=0
+    for keys,values in dic.items():
+        sum+=values*(values-1)
+        
+    return c*sum
+
+
 def plot(num=0):
     fig.clear()
     plot1=fig.add_subplot(111)
@@ -329,6 +279,9 @@ def plot(num=0):
 
     plot1.bar(color='red',*zip(*ndic.items()))
     canvas.draw_idle()
+    ic=IOC(ndic)
+    print("encrypted",ic)
+
     
 
 def reset(O1n=0,O2n=0,O3n=0,refn=0,IR1=0,IR2=0,IR3=0,ER1=0,ER2=0,ER3=0,ed=False): 
@@ -354,6 +307,8 @@ def reset(O1n=0,O2n=0,O3n=0,refn=0,IR1=0,IR2=0,IR3=0,ER1=0,ER2=0,ER3=0,ed=False)
         e4.delete(0,'end')
         e4.insert(0,0)
         e.delete(0,'end')
+        e.insert(END, "hi this is my name how are you im trying to write long as statements cause that gives the most accurate results hey but who knows ill probably get some shitty answers anyway welp whatabout typos can u identify no of typos from this")
+        #e.insert("hi this is my name how are you im trying to write long as statements cause that gives the most accurate results hey but who knows ill probably get some shitty answers anyway welp whatabout typos can u identify no of typos from this",0)
         FL_list.clear()
         
     ref=refn
@@ -409,7 +364,7 @@ def rotor_input(i,switch):
     global rotor_cnt,O1,O2,O3,ref
     if rotor_cnt==3:
         rotor_cnt=0
-    print(rotor_cnt)
+    #print(rotor_cnt)
     if(switch==0):
         if rotor_cnt==0:
             O1=int(i)
@@ -446,6 +401,7 @@ def rotor_input(i,switch):
                 e4.insert(0,i)
         else:
             e3.delete(0,END)
+    
             
            
     print(O1,O2,O3,ref,FL_list)
@@ -459,6 +415,7 @@ l2=Label(root,text="Output").grid(row=1,column=0,columnspan=1,padx=5,pady=5)
 
 e = Entry(root,width=100,borderwidth=4)
 e.grid(row=0,column=1,columnspan=5,padx=5,pady=5)
+
 e2 = Entry(root,width=100,borderwidth=4)
 e2.grid(row=1,column=1,columnspan=5,padx=5,pady=5)
 
@@ -525,13 +482,15 @@ def plot2(num=0):
     
     plot1.bar(color='blue',*zip(*ndic.items()))
     canvas2.draw_idle()
+    ic=IOC(ndic)
+    print("unencrypted",ic)
     
     
 def crypt(O1,O2,O3,rotorI,rotorE,ref,reflector,FL_list,encrypt):
         
     e2.delete(0,END)
     
-    print(rty1)
+    #print(rty1)
     
     
     IR1=int(InternalR1.get())+1
@@ -672,7 +631,7 @@ def crypt(O1,O2,O3,rotorI,rotorE,ref,reflector,FL_list,encrypt):
         
                 
     storage=' '.join(map(str, storage))
-    print(storage)
+    #print(storage)
     
    
     reset(O1,O2,O3,ref,IR1-1,IR2-1,IR3-1,ER1-1,ER2-1,ER3-1,ed=True)
@@ -683,7 +642,7 @@ def random_crypt(O1,O2,O3,rotorI,rotorE,ref,reflector,FL_list,encrypt):
         
     e2.delete(0,END)
     
-    print(rty1)
+    #print(rty1)
     
     
     IR1=int(InternalR1.get())+1
@@ -816,7 +775,7 @@ def random_crypt(O1,O2,O3,rotorI,rotorE,ref,reflector,FL_list,encrypt):
         
                 
     storage=' '.join(map(str, storage))
-    print(storage)
+    #print(storage)
     
    
     reset(O1,O2,O3,ref,IR1-1,IR2-1,IR3-1,ER1-1,ER2-1,ER3-1,ed=True)
